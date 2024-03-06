@@ -17,7 +17,7 @@ mongoose
     app.post("/user-data/order", userDataValidation, userOrder);
     app.post("/add-product", createProducts);
     app.get("/all-goods", getAllProducts);
-    app.listen(5000, () => {
+    app.listen(6000, () => {
       console.log("Server is running on port 5000");
     });
   })
