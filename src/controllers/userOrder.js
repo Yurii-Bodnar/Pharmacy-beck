@@ -16,7 +16,10 @@ export const userOrder = async (req, res) => {
       order,
     });
     const data = await user.save();
-    res.json(data);
+    res.json({
+      message: "Successfully, your order will be fulfilled in the near future",
+      data,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: "Failed to send data" });
