@@ -11,7 +11,7 @@ Code:200
 _id:65ea0147db4a1c84c167426e,Pharmacy24h:Array({5})
 _id:65ea0147db4a1c84c167426b,Pharmacy:Array({5}),
 _id:65ea0147db4a1c84c167426c,Drugs24:Array({5})
-]
+].
 
 Post user order
 Mhetod POST
