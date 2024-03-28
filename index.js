@@ -25,3 +25,6 @@ mongoose
     console.error("DB connection error:", err);
     process.exit(1);
   });
+process.on("uncaughtException", function (err) {
+  console.error("Caught exception: ", err.stack);
+});
