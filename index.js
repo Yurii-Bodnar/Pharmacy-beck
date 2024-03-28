@@ -7,8 +7,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
-
 mongoose.Promise = global.Promise;
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -19,8 +17,8 @@ mongoose
     app.use(cors());
     app.post("/user-data/order", userDataValidation, userOrder);
     app.get("/all-goods", getAllProducts);
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+    app.listen(process.env.PORT || 5000, () => {
+      console.log(`Server is running on port ${process.env.PORT || 5000}`);
     });
   })
   .catch((err) => {
