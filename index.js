@@ -4,13 +4,14 @@ import { userDataValidation } from "./src/validations/user.js";
 import { getAllProducts } from "./src/controllers/goods.js";
 import { userOrder } from "./src/controllers/userOrder.js";
 import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
-const MONGODB_URI =
-  "mongodb+srv://admin:QizhDm2m3RcP45lH@cluster0.pq3ai2w.mongodb.net/pharmacy?retryWrites=true&w=majority&appName=Cluster0";
+const PORT = process.env.PORT || 5000;
 
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("DB running");
     const app = express();
@@ -18,8 +19,8 @@ mongoose
     app.use(cors());
     app.post("/user-data/order", userDataValidation, userOrder);
     app.get("/all-goods", getAllProducts);
-    app.listen(5000, () => {
-      console.log("Server is running on port 5000");
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
     });
   })
   .catch((err) => {
