@@ -2,7 +2,7 @@
 
 ## Documentation
 
-[Base Url](https://paharmacy-beck-d4ecebd44ae2.herokuapp.com/)
+[Base Url](https://paharmacy-beck-d4ecebd44ae2.herokuapp.com/) : https://paharmacy-beck-d4ecebd44ae2.herokuapp.com/
 
 ### Get all products:
 
