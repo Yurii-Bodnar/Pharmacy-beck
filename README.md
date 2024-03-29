@@ -21,6 +21,7 @@
   { "_id": "65ea0147db4a1c84c167426b", "Pharmacy": [{ "count": 5 }] },
   { "_id": "65ea0147db4a1c84c167426c", "Drugs24": [{ "count": 5 }] }
 ]
+```
 ### Post user order
 
 #### Method: POST
@@ -52,9 +53,11 @@
     "require": true
   }
 }
+```
 #### Response:
 
 ```json
 {
   "message": "Successfully, your order will be fulfilled in the near future"
 }
+```
